@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = "Enrico";
+    $arr = [1, 2, 3, 4, 5];
+
+    return view('welcome', ['name' => $name, 'arr' => $arr]);
 });
