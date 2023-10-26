@@ -19,3 +19,14 @@ Route::get('/', function () {
 
     return view('welcome', ['name' => $name, 'arr' => $arr]);
 });
+
+Route::get('/produtos', function () {
+    $busca = request('search');
+
+    return view('products', ['busca' => $busca]);
+});
+
+Route::get('/produto/{id?}', function ($id = null) {
+
+    return view('product', ['id' => $id]);
+});
